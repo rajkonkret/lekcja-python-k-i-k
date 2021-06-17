@@ -61,8 +61,6 @@ def fxn(x, y):
 
     tu_x = x // bok
     tu_y = y // bok
-    index = tu_x + tu_y * 3
-    index_curr = plansza_markery[int(index)]
     global gracz
 
     if 0 <= tu_x < 3 and 0 <= tu_y < 3:
