@@ -1,13 +1,9 @@
 from turtle import *
 
-speed(25)
+speed(100)
 bok = 90
 gracz = "o"
 plansza_markery = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-
-
-# plansza_markery.insert(3, "o")
-
 
 def kwadrat():
     for i in range(4):
@@ -62,13 +58,11 @@ def kolko(ko_x, ko_y):
 
 
 def fxn(x, y):
-    print("klik", x, y)
+
     tu_x = x // bok
     tu_y = y // bok
     index = tu_x + tu_y * 3
     index_curr = plansza_markery[int(index)]
-    print(index_curr)
-    print(tu_x, tu_y)
     global gracz
 
     if 0 <= tu_x < 3 and 0 <= tu_y < 3:
@@ -82,17 +76,8 @@ def fxn(x, y):
                 krzyzyk(tu_x, tu_y)
                 gracz = "o"
 
-    print(plansza_markery)
-
 
 onscreenclick(fxn)
 plansza()
-# kolko(0, 0)
-# kolko(1, 0)
-# kolko(2, 0)
-# kolko(2, 1)
-# kolko(2, 2)
-# mainloop()
-
 
 done()
